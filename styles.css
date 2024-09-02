@@ -1,0 +1,104 @@
+/* Fuente personalizada */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+/* NO ESTA HACIENDO EFECTO LA IMAGEN CAMBIADA */
+.header {
+    background-image: url('img/cafe2.jpeg');
+    /* Reemplaza con una imagen real */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Capa de superposición para oscurecer la imagen */
+}
+
+.header .content {
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    position: relative;
+        top: 0;
+        left: 0;
+        width: 230px;
+        height: 250px;
+    opacity: 0;
+    transform: scale(0);
+    animation: fadeInScale 2s ease-in-out forwards;
+}
+.row .img-fluid {
+    width: 120px;
+    /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    /*Esto mantiene la proporción original de la imagen*/
+}
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.footer {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #17a2b8;
+    text-decoration: underline;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer i {
+    color: #ffffff;
+}
+
+.footer i:hover {
+    color: #17a2b8;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+    }
+
+    .footer .col-md-6 {
+        margin-bottom: 2rem;
+    }
+}
+
